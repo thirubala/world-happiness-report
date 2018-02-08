@@ -47,7 +47,7 @@ def get_metric():
 	resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
 
 	# resp.content contains the json response.
-	print(resp.content)
+	return resp.content
 	
 
 
