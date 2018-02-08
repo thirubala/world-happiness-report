@@ -6,6 +6,9 @@ from src import app
 def home():
     return "Hasura Hello World"
 
+@app.route("/hello")
+def hello_world():
+	return "Hello World - Thiru"
 # Uncomment to add a new URL at /new
 
 # @app.route("/json")
