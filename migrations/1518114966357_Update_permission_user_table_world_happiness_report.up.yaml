@@ -1,0 +1,20 @@
+- args:
+    permission:
+      columns:
+      - Family
+      - HLE
+      - Freedom
+      - Generosity
+      - TGC
+      - Dystopia
+      - H_Score
+      - ID
+      - Country
+      - H_Rank
+      - W_High
+      - W_Low
+      - GDP
+      filter: {}
+    role: user
+    table: world_happiness_report
+  type: create_select_permission
