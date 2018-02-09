@@ -56,8 +56,7 @@ def get_metric():
 
 	# Make the query and store response in resp
 	dbresp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers
-	#creating an empty list
-	dictmetric = {}
+
 	# contains the json response.
 	for i,j in dbresp.content.iteritems:
 		if j == 'Country':
