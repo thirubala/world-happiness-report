@@ -92,4 +92,5 @@ def testmethod():
 
 	# contains the json response.
 	dbjson = jsonify(dbresp.content)
-	print dbjson
+	
+	return dbjson
