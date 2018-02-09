@@ -58,7 +58,7 @@ def get_metric():
 	dbresp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
 	dictmetric = []
 	# contains the json response.
-	for i in len(dbresp):
+	for i in len(dbresp.content):
 		dictmetric[i] = dbresp[i]
 	
 	return dictmetric
