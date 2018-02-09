@@ -58,7 +58,7 @@ def get_metric():
 	dbresp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
 
 	# contains the json response.
-	return dbresp.json
+	return dbresp.content
 
 @app.route("/testurl")
 def testmethod():
@@ -91,4 +91,5 @@ def testmethod():
 	dbresp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
 
 	# contains the json response.
-	return dbresp.json
+	dbjson = jsonify(dbresp.content)
+	print dbjson
