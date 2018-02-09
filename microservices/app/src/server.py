@@ -27,7 +27,8 @@ def form():
 @app.route("/getmetric",methods=['POST'])
 def get_metric():
 #get the metric from front-end
-	metric = request.get_json()
+	jsonMetric = request.get_json()
+	key = jsonMetric['metric']
 	
 # This is the url to which the query is made
 	url = "https://data.declassification29.hasura-app.io/v1/query"
@@ -57,11 +58,9 @@ def get_metric():
 	resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
 
 	# resp.content contains the json response.
-	return resp.content
+	return json.loads(resp.text)
 	
 @app.route("/json",methods=['POST'])
 def get_json():
-	jsonMetric = request.get_json()
-	key = jsonMetric['metric']
-	return key
+	
 
