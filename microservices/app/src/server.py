@@ -59,8 +59,6 @@ def get_metric():
 
 	# resp.content contains the json response.
 	return json.loads(resp.text)
-	
-@app.route("/json",methods=['POST'])
-def get_json():
+
 	
 
