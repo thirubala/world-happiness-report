@@ -1,6 +1,7 @@
 from src import app
 from flask import jsonify, json
 from flask import Flask,render_template,make_response
+from flask import request
 import requests
 
 @app.route("/")
@@ -16,9 +17,21 @@ def hello_world():
 def json_message():
     return jsonify(message="Hello World")
 	
-@app.route("/getmetric")
+@app.route("/form",methods=['GET','POST'])
+def form():
+	if request.method == 'POST': #this block is only entered when the form is submitted
+        language = request.form.get('metric')
+		return '''<h1>The metric value is: {}</h1>'''.format(metric)
+
+    return '''<form method="POST">
+                  Metric: <input type="text" name="metric"><br>
+                  <input type="submit" value="Submit"><br>
+              </form>'''
+	
+@app.route("/getmetric",methods=['POST'])
 def get_metric():
-	#query to select the data from the table
+#get the metric from front-end
+	metric = request.get_json()
 	
 # This is the url to which the query is made
 	url = "https://data.declassification29.hasura-app.io/v1/query"
