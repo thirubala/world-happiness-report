@@ -20,13 +20,13 @@ def json_message():
 @app.route("/form",methods=['GET','POST'])
 def form():
 	if request.method == 'POST': #this block is only entered when the form is submitted
-        language = request.form.get('metric')
+		language = request.form.get('metric')
 		return '''<h1>The metric value is: {}</h1>'''.format(metric)
 
-    return '''<form method="POST">
-                  Metric: <input type="text" name="metric"><br>
-                  <input type="submit" value="Submit"><br>
-              </form>'''
+	return '''<form method="POST">
+            Metric: <input type="text" name="metric"><br>
+            <input type="submit" value="Submit"><br>
+            </form>'''
 	
 @app.route("/getmetric",methods=['POST'])
 def get_metric():
