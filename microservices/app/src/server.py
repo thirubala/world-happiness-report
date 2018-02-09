@@ -58,8 +58,8 @@ def get_metric():
 	dbresp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers
 
 	# contains the json response.
-	for i,j in dbresp.content.iteritems:
+	for i in dbresp.content.iteritems:
 		if j == 'Country':
-			dictmetric[i] = dbresp[i][j]
+			dictmetric[i] = dbresp[i]['Country']
 	
 	return dictmetric
