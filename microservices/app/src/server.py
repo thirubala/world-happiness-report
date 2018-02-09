@@ -61,5 +61,7 @@ def get_metric():
 	
 @app.route("/json",methods=['POST'])
 def get_json():
-	return "Json received"
+	jsonMetric = request.get_json()
+	key = jsonMetric['metric']
+	return key
 
