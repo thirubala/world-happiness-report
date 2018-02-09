@@ -17,7 +17,7 @@ def hello_world():
 def json_message():
     return jsonify(message="Hello World")
 	
-@app.route("/form",methods=['GET','POST'])
+@app.route("/form",methods=['POST'])
 def form():
 	if request.method == 'POST': #this block is only entered when the form is submitted
 		metric = request.form.get('metric')
@@ -63,5 +63,7 @@ def get_metric():
 	# resp.content contains the json response.
 	return resp.content
 	
-
+@app.route("/json",methods=['POST'])
+def get_json():
+	return "Json received"
 
