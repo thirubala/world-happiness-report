@@ -58,10 +58,6 @@ def get_metric():
 	dbresp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
 
 	# contains the json response.
-	try:
-		jsonData = json.loads(dbresp)
-	except ValueError,e:
-		return False
-	return true
+	return dbresp
 
 
