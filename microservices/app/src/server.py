@@ -59,6 +59,6 @@ def get_metric():
 	dictmetric = []
 	# contains the json response.
 	for i in len(dbresp.content):
-		dictmetric[i] = dbresp[i]
+		dictmetric[i] = dbresp[i]["Country"]
 	
 	return dictmetric
