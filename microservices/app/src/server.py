@@ -56,41 +56,9 @@ def get_metric():
 
 	# Make the query and store response in resp
 	dbresp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
-
+	dictmetric = []
 	# contains the json response.
-	return dbresp.content
-
-@app.route("/testurl")
-def testmethod():
-
-# This is the url to which the query is made
-	url = "https://data.declassification29.hasura-app.io/v1/query"
-
-	# This is the json payload for the query
-	requestPayload = {
-		"type": "select",
-		"args": {
-			"table": "world_happiness_report",
-			"columns": [
-				"*"
-			],
-			"order_by": [
-				{
-					"column": "ID"
-				}
-			]
-		}
-	}
-
-	# Setting headers
-	headers = {
-		"Content-Type": "application/json"
-	}
-
-	# Make the query and store response in resp
-	dbresp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
-
-	# contains the json response.
-	dbjson = jsonify(dbresp.content)
+	for i in len(dbresp):
+		dictmetric[i] = dbresp[i]
 	
-	return dbjson
+	return dictmetric
