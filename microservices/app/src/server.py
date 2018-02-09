@@ -13,10 +13,6 @@ def hello_world():
 	return "Hello World - Thiru"
 # Uncomment to add a new URL at /new
 
-@app.route("/json")
-def json_message():
-    return jsonify(message="Hello World")
-	
 @app.route("/form",methods=['POST'])
 def form():
 	if request.method == 'POST': #this block is only entered when the form is submitted
