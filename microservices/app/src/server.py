@@ -63,8 +63,8 @@ def get_metric():
 	newlist = []
 	
 	#looping through the json object
-	for key,value in respjson.iteritems:
+	for key in respjson
 		if key == 'Country':
-			newlist[key]=value
+			newlist[key]=respjson[key]
 	
 	return "Success"
