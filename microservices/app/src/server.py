@@ -71,4 +71,4 @@ def get_metric():
 	
 	anslist = json.dumps(newlist)
 	
-	return newlist
+	return "Success"
