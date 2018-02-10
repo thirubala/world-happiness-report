@@ -61,11 +61,13 @@ def get_metric():
 	respjson = json.loads(dbresp.content)
 	
 	newlist = []
+	i=0
 	
 	#looping through the json object
 	for key in respjson:
 		if key == 'Country':
-			newlist[key]=respjson[key]
+			newlist.insert(i,respjson[key])
+			i+=1
 	
 	anslist = json.dumps(newlist)
 	
