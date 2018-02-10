@@ -58,7 +58,7 @@ def get_metric():
 	dbresp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
 	
 	#converting the response to json object
-	#respjson = json.loads(dbresp.content)
+	respjson = json.loads(dbresp.content)
 	
 	newlist = []
 	i=0
