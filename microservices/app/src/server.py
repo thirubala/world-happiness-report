@@ -65,10 +65,10 @@ def get_metric():
 	
 	#looping through the json object
 	for key in respjson:
-		if key == 'Country':
+	#if key == 'Country':
 			newlist.insert(i,respjson[key])
 			i+=1
 	
 	anslist = json.dumps(newlist)
 	
-	return "Success"
+	return anslist
