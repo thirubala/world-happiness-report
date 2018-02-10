@@ -61,4 +61,8 @@ def get_metric():
 	respbyte = dbresp.content
 
 	#return json data
-	return json.loads(respbyte)
+	respjson = json.loads(respbyte)
+
+	print respjson
+	
+	return "Success"
