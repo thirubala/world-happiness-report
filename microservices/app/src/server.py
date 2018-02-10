@@ -63,4 +63,4 @@ def get_metric():
 	#for i in len(jsondata):
 	#	dictmetric[i] = dbresp[i]
 	
-	return json.loads(dbresp.content)
+	return json.loads(dbresp)
