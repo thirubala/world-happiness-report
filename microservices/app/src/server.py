@@ -69,6 +69,6 @@ def get_metric():
 			newlist.insert(i,respjson[key])
 			i+=1
 	
-	anslist = json.dumps(newlist)
+	anslist = json.loads(newlist)
 	
 	return anslist
