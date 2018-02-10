@@ -63,6 +63,6 @@ def get_metric():
 	#return json data
 	respjson = json.loads(respbyte)
 
-	print respjson
+#print respjson
 	
 	return "Success"
