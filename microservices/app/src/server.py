@@ -57,11 +57,8 @@ def get_metric():
 	# Make the query and store response in resp
 	dbresp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
 	
-	#converting the response to byte object
-	respbyte = dbresp.content
-
-	#return json data
-	respjson = json.loads(respbyte)
+	#converting the response to json object
+	respjson = json.loads(dbresp.content)
 
 #print respjson
 	
