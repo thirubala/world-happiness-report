@@ -67,4 +67,6 @@ def get_metric():
 		if key == 'Country':
 			newlist[key]=respjson[key]
 	
-	return "Success"
+	anslist = json.dumps(newlist)
+	
+	return anslist
