@@ -59,7 +59,14 @@ def get_metric():
 	
 	#converting the response to json object
 	respjson = json.loads(dbresp.content)
+	
+	ansobj = {}
+	
+	#for loop to get the required metric alone
+	#for key,value in respjson.iteritems:
+	#	if key == 'Country':
+	#		ansobj.append(respjson)
 
-#print respjson
+    print(respjson)
 	
 	return "Success"
