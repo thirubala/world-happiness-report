@@ -64,7 +64,7 @@ def get_metric():
 	i=0
 	
 	#looping through the json object
-	for key in respjson.values:
+	for key in respjson.itervalues:
 		if respjson[key] == 'Country':
 			newlist.insert(respjson[key])
 			i+=1
