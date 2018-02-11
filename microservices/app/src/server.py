@@ -72,7 +72,7 @@ def get_metric():
 	
 	anslist = json.dumps(i)
 	
-	if isinstance(respjson,(tuple, list, dict, set)):
-		return 'Built-in container object'
+	if isinstance(respjson,dict):
+		return 'Built-in dict object'
 	else:
 		return 'Failed'
