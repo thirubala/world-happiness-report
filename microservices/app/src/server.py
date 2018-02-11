@@ -67,9 +67,9 @@ def get_metric():
 	#looping through the json object
 	for key in dbresp:
 		newlist = dbresp.json()
-		countrylist = newlist[key]
-		#i+=1
+		countrylist = newlist[0]
+		i+=1
 	
-	anslist = json.dumps(countrylist)
+	anslist = json.dumps(i)
 	
-	return anslist
+	return i
