@@ -64,11 +64,11 @@ def get_metric():
 	i = 0
 	
 	#looping through the list object
-	for index, value in enumerate(respjson):
+	#for index, value in enumerate(respjson):
 		#looping through the dict object
-		return {c for c in value if value == 'Country'}
+		#return {c for c in value if value == 'Country'}
 				
 	
 	#anslist = json.dumps(countrylist)
 	
-	#return anslist
+	return "Success"
