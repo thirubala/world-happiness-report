@@ -65,7 +65,7 @@ def get_metric():
 	
 	#looping through the json object
 	for index, value in enumerate(respjson):
-		countrylist.insert(i,index)
+		countrylist.insert(i,value)
 		i += 1
 	
 	anslist = json.dumps(countrylist)
