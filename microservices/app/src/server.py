@@ -63,12 +63,11 @@ def get_metric():
 	countrylist = []
 	i = 0
 	
-	#looping through the json object
+	#looping through the list object
 	for index, value in enumerate(respjson):
-		if isinstance(value,dict):
-			return "Is a dict"
-		else:
-			return "Is not a dict"
+		#looping through the dict object
+		return {c for c in value if value == 'Country'}
+				
 	
 	#anslist = json.dumps(countrylist)
 	
