@@ -58,17 +58,18 @@ def get_metric():
 	dbresp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
 	
 	#converting the response to json object
-	respjson = json.loads(dbresp.content)
+	#respjson = json.loads(dbresp.content)
 	
 	newlist = []
+	countrylist = []
 	i=0
 	
 	#looping through the json object
-	for key in range(len(respjson)):
-		if respjson[key] == 'Country':
-			newlist.insert(i,respjson[key])
-			i+=1
+	for key in dbresp:
+		newlist = dbresp.json()
+		countrylist = newlist['Country']
+		i+=1
 	
-	anslist = json.dumps(newlist)
+	anslist = json.dumps(countrylist)
 	
 	return anslist
