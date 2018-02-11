@@ -60,19 +60,12 @@ def get_metric():
 	#converting the response to json object
 	respjson = json.loads(dbresp.content)
 	
-	newlist = []
 	countrylist = []
-	i=0
 	
 	#looping through the json object
-	for key in dbresp:
-		newlist = dbresp.json()
-		countrylist = newlist[0]
-		i+=1
+	for index, value in enumerate(respjson):
+		countrylist.insert(index)
 	
-	anslist = json.dumps(i)
+	anslist = json.dumps(countrylist)
 	
-	if isinstance(respjson,list):
-		return 'Built-in list object'
-	else:
-		return 'Failed'
+	return anslist
