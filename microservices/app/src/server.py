@@ -58,7 +58,7 @@ def get_metric():
 	dbresp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
 	
 	#converting the response to json object
-	#respjson = json.loads(dbresp.content)
+	respjson = json.loads(dbresp.content)
 	
 	newlist = []
 	countrylist = []
@@ -72,7 +72,7 @@ def get_metric():
 	
 	anslist = json.dumps(i)
 	
-	if isinstance(dbresp,str):
-		return 'Success'
+	if isinstance(respjson,(tuple, list, dict, set)):
+		return 'Built-in container object'
 	else:
 		return 'Failed'
