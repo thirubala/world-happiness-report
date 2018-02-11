@@ -68,6 +68,6 @@ def get_metric():
 	#	countrylist.insert(i,value)
 	#	i += 1
 	
-	anslist = json.dumps(countrylist.list({))
+	anslist = json.dumps(countrylist.list('{'))
 	
 	return anslist
