@@ -65,9 +65,11 @@ def get_metric():
 	
 	#looping through the json object
 	for index, value in enumerate(respjson):
-		countrylist.insert(i,value.split('{'))
-		i += 1
+		if isinstance(value,dict):
+			return "Is a dict"
+		else:
+			return "Is not a dict"
 	
-	anslist = json.dumps(countrylist)
+	#anslist = json.dumps(countrylist)
 	
-	return anslist
+	#return anslist
