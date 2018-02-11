@@ -63,7 +63,7 @@ def get_metric():
 	countrylist = []
 	i = 0
 	
-	looping through the json object
+	#looping through the json object
 	for index, value in enumerate(respjson):
 		countrylist.insert(i,value.split('{'))
 		i += 1
