@@ -73,6 +73,6 @@ def get_metric():
 	anslist = json.dumps(i)
 	
 	if isinstance(dbresp,list):
-		return True
+		return 'Success'
 	else:
-		return False
+		return 'Failed'
