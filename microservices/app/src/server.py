@@ -60,14 +60,14 @@ def get_metric():
 	#converting the response to json object
 	respjson = json.loads(dbresp.content)
 	
-	#countrylist = []
-	#i = 0
+	countrylist = []
+	i = 0
 	
-	#looping through the json object
-	#for index, value in enumerate(respjson):
-	#	countrylist.insert(i,value)
-	#	i += 1
+	looping through the json object
+	for index, value in enumerate(respjson):
+		countrylist.insert(i,value.split('{'))
+		i += 1
 	
-	anslist = json.dumps(respjson.split('{'))
+	anslist = json.dumps(countrylist)
 	
 	return anslist
