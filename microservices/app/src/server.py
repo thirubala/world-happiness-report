@@ -65,7 +65,7 @@ def get_metric():
 	for index, value in enumerate(respjson):
 		#looping through the dict object
 		for x,y in value.items():
-			if x == 'Country':
+			if x == 'Country' or x == metric:
 				temp = {x:y}
 				result.update(temp)
 	
