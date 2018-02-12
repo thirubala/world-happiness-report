@@ -69,6 +69,6 @@ def get_metric():
 		temp = {key:val for key,value in value.items() if index in metricnames}
 		result.update(temp)
 	
-	anslist = json.dumps(result)
+	anslist = json.dumps(bool(result))
 	
 	return anslist
