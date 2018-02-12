@@ -70,6 +70,6 @@ def get_metric():
 		result[i] = temp
 		i += 1
 	
-	anslist = json.dumps(anslist)
+	anslist = json.dumps(result)
 	
 	return anslist
