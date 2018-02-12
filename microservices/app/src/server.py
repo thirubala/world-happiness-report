@@ -64,9 +64,9 @@ def get_metric():
 	#looping through the list object
 	for index, value in enumerate(respjson):
 		#looping through the dict object
-		temp = {x:y for x,y in value.items() if x in ('Country',metric)}
-		result.update(temp)
+		#temp = {x:y for x,y in value.items() if x in ('Country',metric)}
+		result.update(index)
 	
-	anslist = json.dumps(len(respjson))
+	anslist = json.dumps(result)
 	
 	return anslist
