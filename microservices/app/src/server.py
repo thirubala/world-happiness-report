@@ -72,4 +72,4 @@ def get_metric():
 	
 	anslist = json.dumps(len(result))
 	
-	return anslist
+	return result
