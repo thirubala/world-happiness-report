@@ -60,8 +60,8 @@ def get_metric():
 	#converting the response to json object
 	respjson = json.loads(dbresp.content)
 	
-	temp = []
-	result = []
+	temp = {}
+	result = {}
 	i = 0
 	metricnames = {'Country',metric}
 	#looping through the list object
