@@ -61,12 +61,10 @@ def get_metric():
 	respjson = json.loads(dbresp.content)
 	
 	result = {}	
-	i = 0
-	metricnames = {'Country',metric}
 	#looping through the list object
 	for index, value in enumerate(respjson):
 		#looping through the dict object
-		for x in value:
+		for x in value.keys():
 			if x == 'Country':
 				temp = {x:value[x]}
 				result.update(temp)
