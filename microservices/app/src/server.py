@@ -71,6 +71,6 @@ def get_metric():
 				temp = {x:value[x]}
 				result.update(temp)
 	
-	anslist = json.dumps(bool(result))
+	anslist = json.dumps(result)
 	
 	return anslist
