@@ -28,7 +28,7 @@ def form():
 def get_metric():
 	#get the metric from front-end
 	jsonMetric = request.get_json()
-	key = jsonMetric['metric']
+	metric = jsonMetric['metric']
 	
 	# This is the url to which the query is made
 	url = "https://data.declassification29.hasura-app.io/v1/query"
@@ -60,15 +60,16 @@ def get_metric():
 	#converting the response to json object
 	respjson = json.loads(dbresp.content)
 	
-	countrylist = []
+	result = []
 	i = 0
-	
+	metricnames = {'Country',metric}
 	#looping through the list object
 	for index, value in enumerate(respjson):
 		#looping through the dict object
-		return json.dumps({c for c in value if value == 'Country'})
+		result[i] = {key:val for key,value in value.items() if index in metricnames}
+		i += 1
 				
 	
-	#anslist = json.dumps(countrylist)
+	anslist = json.dumps(result)
 	
-	return "Success"
+	return anslist
