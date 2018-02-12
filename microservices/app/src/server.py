@@ -67,6 +67,6 @@ def get_metric():
 		temp = {x:y for x,y in value.items() if x in ('Country',metric)}
 		result.update(temp)
 	
-	anslist = json.dumps(result)
+	anslist = json.dumps(respjson)
 	
 	return anslist
