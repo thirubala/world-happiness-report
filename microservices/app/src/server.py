@@ -61,11 +61,14 @@ def get_metric():
 	respjson = json.loads(dbresp.content)
 	
 	result = {}	
+	i = 0
 	#looping through the list object
 	for index, value in enumerate(respjson):
 		#looping through the dict  using dict comprehension
 		temp = {x:y for x,y in value.items() if x in ('Country',metric)}
-		result.append(temp)
+		result[i] = {}
+		result[i] = temp
+		i += 1
 	
 	anslist = json.dumps(anslist)
 	
