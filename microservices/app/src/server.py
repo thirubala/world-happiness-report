@@ -60,13 +60,14 @@ def get_metric():
 	#converting the response to json object
 	respjson = json.loads(dbresp.content)
 	
+	temp = {}
 	result = {}	
 	i = 0
 	metricnames = {'Country',metric}
 	#looping through the list object
 	for index, value in enumerate(respjson):
 		#looping through the dict object
-		temp = {key:val for key,value in value.items() if index in metricnames}
+		temp{} = {key:val for key,value in value.items() if index in metricnames}
 		result.update(temp)
 	
 	anslist = json.dumps(bool(result))
