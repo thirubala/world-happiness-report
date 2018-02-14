@@ -28,7 +28,7 @@ def form():
 def get_metric():
 	#get the metric from front-end
 	jsonMetric = request.get_json()
-	metric = jsonMetric['metric']
+	metric = jsonMetric[0]
 	
 	# This is the url to which the query is made
 	url = "https://data.declassification29.hasura-app.io/v1/query"
