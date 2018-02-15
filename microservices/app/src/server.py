@@ -30,9 +30,9 @@ def get_metric():
 	jsonMetric = request.get_json()
 	
 	if isinstance(jsonMetric,(dict,tuple,list)):
-		return "is tuple"
+		return "tuple"
 	else:
-		return "is not tuple"
+		return "not tuple"
 		
 	#metric = jsonMetric['metric']
 
