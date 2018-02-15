@@ -28,48 +28,54 @@ def form():
 def get_metric():
 	#get the metric from front-end
 	jsonMetric = request.get_json()
-	metric = jsonMetric['metric']
 	
+	if isinstance(jsonMetric,(dict,tuple,list)):
+		return "is tuple"
+	else:
+		return "is not tuple"
+		
+	#metric = jsonMetric['metric']
+
 	# This is the url to which the query is made
-	url = "https://data.declassification29.hasura-app.io/v1/query"
+	#url = "https://data.declassification29.hasura-app.io/v1/query"
 
 	# This is the json payload for the query
-	requestPayload = {
-		"type": "select",
-		"args": {
-			"table": "world_happiness_report",
-			"columns": [
-				"*"
-			],
-			"order_by": [
-				{
-					"column": "ID"
-				}
-			]
-		}
-	}
+	#requestPayload = {
+	#	"type": "select",
+	#	"args": {
+	#		"table": "world_happiness_report",
+	#		"columns": [
+	#			"*"
+	#		],
+	#		"order_by": [
+	#			{
+	#				"column": "ID"
+	#			}
+	#		]
+	#	}
+	#}
 
 	# Setting headers
-	headers = {
-		"Content-Type": "application/json"
-	}
+	#headers = {
+	#	"Content-Type": "application/json"
+	#}
 
 	# Make the query and store response in resp
-	dbresp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
+	#dbresp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
 	
 	#converting the response to json object
-	respjson = json.loads(dbresp.content)
+	#respjson = json.loads(dbresp.content)
 	
-	result = {}	
-	i = 0
+	#result = {}	
+	#i = 0
 	#looping through the list object
-	for index, value in enumerate(respjson):
+	#for index, value in enumerate(respjson):
 		#looping through the dict  using dict comprehension
-		temp = {x:y for x,y in value.items() if x in ('Country',metric)}
-		result[i] = {}
-		result[i] = temp
-		i += 1
+	#	temp = {x:y for x,y in value.items() if x in ('Country',metric)}
+	#	result[i] = {}
+	#	result[i] = temp
+	#	i += 1
 	
-	anslist = json.dumps(result)
+	#anslist = json.dumps(result)
 	
-	return anslist
+	#return anslist
