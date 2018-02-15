@@ -29,7 +29,10 @@ def get_metric():
 	#get the metric from front-end
 	jsonMetric = request.get_json()
 	
-	metric = jsonMetric['metric']
+	#converting to json object
+	jsonData = json.loads(jsonMetric)
+	
+	metric = jsonData['metric']
 
 	# This is the url to which the query is made
 	url = "https://data.declassification29.hasura-app.io/v1/query"
