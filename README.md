@@ -15,21 +15,21 @@ Boilerplate Hasura project with [Flask](http://flask.pocoo.org/) microservice.
 
 ```bash
 # Quickstart from this boilerplate 
-$ hasura quickstart hello-python-flask
+$ hasura quickstart thirubala/world-happiness-report
 ```
 
 The `quickstart` command does the following:
 
-1. Creates a new directory `hello-python-flask` in the current working directory
+1. Creates a new directory `world-happiness-report` in the current working directory
 2. Creates a free Hasura cluster and sets it as the default for this project
-3. Sets up `hello-python-flask` as a git repository and adds `hasura` remote to push code
+3. Sets up `world-happiness-report` as a git repository and adds `hasura` remote to push code
 4. Adds your SSH public key to the cluster so that you can push to it
 
 ### Deploy
 
 ```bash
 # Navigate to the project directory
-$ cd hello-python-flask
+$ cd world-happiness-report
 
 # git add, commit and push to deploy
 $ git add . && git commit -m "First commit"
@@ -48,7 +48,7 @@ If it doesn't, go through the previous steps and see if you missed anything.
 
 
 ## Edit and deploy code
-
+Login to the ```hasura api-console``` to access the postgreSql database
 ### Directory structure
 
 The flask microservice is located in `microservices/app` directory in your Hasura project with the following structure:
