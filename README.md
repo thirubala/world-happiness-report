@@ -49,6 +49,22 @@ If it doesn't, go through the previous steps and see if you missed anything.
 
 ## Edit and deploy code
 Login to the ```hasura api-console``` to access the postgreSql database
+
+Add the required table structure using the api-console
+
+Download the ```World-Happiness-Report - 2017``` csv file from the below link and save it in a local folder
+https://www.kaggle.com/unsdsn/world-happiness/data
+
+Remove the header row from the .csv file
+
+Use below code to specify the port through which the postgreSql server needs to be accessed:
+
+```hasura microservice port-forward postgres -n hasura --local-port 5432```
+
+The following code will upload the data from our local server to the hasura cluster database
+
+```psql -h localhost -p 5432 -d hasuradb -U admin -c "\copy world_happiness_report from 'file_path' delimiter ',';"```
+
 ### Directory structure
 
 The flask microservice is located in `microservices/app` directory in your Hasura project with the following structure:
