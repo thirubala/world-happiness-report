@@ -14,6 +14,7 @@ you can install those by adding it to the `Dockerfile` at the correct place.
 flask
 requests
 gunicorn
+flask-cors
 
 # add your new packages one per each line
 ```
