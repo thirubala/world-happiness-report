@@ -20,9 +20,9 @@ $ hasura quickstart thirubala/world-happiness-report
 
 The `quickstart` command does the following:
 
-1. Creates a new directory `world-happiness-report` in the current working directory
+1. Creates a new directory `worldhappiness-flask-react` in the current working directory
 2. Creates a free Hasura cluster and sets it as the default for this project
-3. Sets up `world-happiness-report` as a git repository and adds `hasura` remote to push code
+3. Sets up `worldhappiness-flask-react` as a git repository and adds `hasura` remote to push code
 4. Adds your SSH public key to the cluster so that you can push to it
 
 ### Deploy
@@ -119,6 +119,9 @@ $ hasura microservice open app
 
 # add /json at the end of the url
 ```
+To checkout if the app is working as open the UI microservice URL 'https://ui.cluster-name.hasura-app.io
+
+Try selecting any one of the metrics and the chart will be displayed below it once submitted.
 
 ### Debug
 
@@ -262,6 +265,7 @@ you can install those by adding it to the `Dockerfile` at the correct place.
 flask
 requests
 gunicorn
+flask_cors
 
 # add your new packages one per each line
 ```
